@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include('nav'); -%>
+        <div class="container">
+            <h1 class="text-center bottom">Cat Shop</h1>
+            <h2 class="text-center">Coin :
+                <%= coin %> Tcoin
+            </h2>
+            <!-- <div class="text-center top">
+                <a class="btn btn-primary center-block" href="/updateCoin" role="button">update coin</a>
+            </div> -->
+
+            <!-- item -->
+            <div class="row top">
+                <div class="col-4">
+                    <div class="card">
+                        <img role="presentation" src="http://cdn1-www.cattime.com/assets/uploads/gallery/persian-cats-and-kittens/persian-cats-and-kittens-8.jpg"
+                            class='card-img-top pic-size' />
+                        <div class="card-body">
+                            <h5 class="card-title">British Shorthair</h5>
+                            <p class='card-content'>1500 Tcoin</p>
+                            <% if(status1){ %>
+                            <button class="btn btn-danger">Sold</button>
+                            <%} else{ %>
+                            <button class="btn btn-primary" id="buy1">Buy</button>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img role="presentation" src="http://cdn2-www.cattime.com/assets/uploads/gallery/british-shorthair-cats-and-kittens/british-shorthair-cats-and-kittens-5.jpg"
+                            class='card-img-top pic-size' />
+                        <div class="card-body">
+                            <h5 class="card-title">Sphynx cat</h5>
+                            <p class='card-content'>2000 Tcoin</p>
+                            <% if(status2){ %>
+                                <button class="btn btn-danger">Sold</button>
+                                <%} else{ %>
+                                <button class="btn btn-primary" id="buy2">Buy</button>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img role="presentation" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjGjIsjlAWVtZhKWTVgxeqazWJfLOaAsXU2XC4YWkKiALxnt3Ww"
+                            class='card-img-top pic-size' />
+                        <div class="card-body">
+                            <h5 class="card-title">Russian Blue</h5>
+                            <p class='card-content'>5000 Tcoin</p>
+                            <% if(status3){ %>
+                                <button class="btn btn-danger">Sold</button>
+                                <%} else{ %>
+                                <button class="btn btn-primary" id="buy3">Buy</button>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <P class="text-center top">!!!!!!ทุกครั้งที่ทำการซื้อโปรดกด Refresh page ด้วยนะครับ!!!!!!</P>
+        </div>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="/script.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

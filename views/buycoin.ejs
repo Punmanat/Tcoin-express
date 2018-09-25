@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buy Coin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include('nav'); -%>
+        <div class="container">
+            <h1 class="text-center bottom">Buy Coin</h1>
+            <div class="row text-center">
+                <div class="col-6">
+                    <button class="btn btn-warning" id="buy1000">Buy 1000 Tcoin</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-warning" id="buy2000">Buy 2000 Tcoin</button>
+                </div>
+            </div>
+            <div class="row text-center top">
+                <div class="col-6">
+                    <p>1000 Tcoin --> 0.06 ether</p>
+                </div>
+                <div class="col-6">
+                    <p>2000 Tcoin --> 0.1 ether</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <p>Transaction Id => <span id="transactionId"></span></p>
+            </div>
+            <div class="text-center top">
+                <h3>####Send Eth to Owner####</h3>
+                <p>####Owner Only####</p>
+            </div>
+            <div class="row text-center top">
+                <div class="col-12">
+                    <button class="btn btn-danger" id="sendOwner">Send Entire Eth</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="/script.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

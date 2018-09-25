@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About page</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <%- include('nav'); -%>
+        <div class="container">
+            <h3 class="text-center top">Send Coin To Another Address</h3>
+            <h3 class="text-center top bottom">Coin :
+                    <%= coin %> Tcoin
+                </h3>
+            <form action="/sendcoinit" method="POST" class="top">
+                <div class="form-group">
+                    <label>Address :</label>
+                    <input type="text" class="form-control" name="address" placeholder="address of reciever">
+                </div>
+                <div class="form-group">
+                    <label>Amount : (Tcoin)</label>
+                    <input type="text" class="form-control" name="amount" placeholder="amount of tcoin">
+                </div>
+                <button type="submit" class="btn btn-success" >Send Coin</button>
+            </form>
+        </div>
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="/script.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
